@@ -1,0 +1,25 @@
+<h2>Books</h2>
+<div class="row"  >
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Cover</th>
+      <th>Name</th>
+      <th>Author</th>
+      <th>Price</th>
+      <th>Buy</th>
+
+    </tr>
+    </thead>
+    <tbody  >
+    <tr *ngFor="let book of books">
+      <td><img alt="" src="{{book.img}}" style="width: 70px; height: 80px"></td>
+      <td>{{book.name}}</td>
+      <td>{{book.author}}</td>
+      <td>{{ book.price+"€" }}</td>
+      <td><button class="btn btn-success" (click)="addToCart(book)">Add to cart</button></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
