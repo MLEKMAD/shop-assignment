@@ -4,12 +4,14 @@ import {BookListComponent} from "./book-list/book-list.component";
 import {BasketComponent} from "./basket/basket.component";
 import {ContactComponent} from "./contact/contact.component";
 import {WelcomeComponent} from "./welcome/welcome.component";
+import { UsersComponent } from './users/users.component';
 
 
 const routes: Routes=[
   {path: '', component:WelcomeComponent},
   {path: 'store', component: BookListComponent},
   {path: 'basket', component: BasketComponent},
+  {path: 'users', component: UsersComponent},
   {path: 'contact', component:ContactComponent}
 ];
 

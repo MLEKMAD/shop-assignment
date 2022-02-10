@@ -10,6 +10,8 @@ import { AppComponent } from './app.component';
 import { BookListComponent } from './book-list/book-list.component';
 import { BasketComponent } from './basket/basket.component';
 import { NavbarComponent } from './navbar/navbar.component'
+import { UsersComponent } from './users/users.component';
+
 
 @NgModule({
   declarations: [
@@ -18,6 +20,7 @@ import { NavbarComponent } from './navbar/navbar.component'
     BasketComponent,
     NavbarComponent,
     ContactComponent,
+    UsersComponent,
   ],
   imports: [
     BrowserModule,
