@@ -13,6 +13,8 @@ import { NavbarComponent } from './navbar/navbar.component'
 import { UsersComponent } from './users/users.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { Book } from './models/book.model';
+import { UserDetailsComponent } from './user-details/user-details.component';
+import { User } from './models/user.model';
 
 
 @NgModule({
@@ -24,6 +26,7 @@ import { Book } from './models/book.model';
     ContactComponent,
     UsersComponent,
     ProductDetailsComponent,
+    UserDetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,7 @@ import { Book } from './models/book.model';
     FormsModule,
     StoreModule.forRoot({book: bookReducer} as ActionReducerMap<any,any> ),
   ],
-  providers: [Book],
+  providers: [Book, User],
   bootstrap: [AppComponent]
 })
 

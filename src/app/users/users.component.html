@@ -18,7 +18,7 @@
         <td>{{user.username}}</td>
         <td>{{ user.email}}</td>
         <td>{{ user.phone}}</td>
-        <td><button class="btn btn-success">Show info</button></td>
+        <td><button class="btn btn-success" (click)="showInfo(user)">Show info</button></td>
       </tr>
     </tbody>
   </table>
