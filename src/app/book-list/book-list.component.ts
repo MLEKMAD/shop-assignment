@@ -4,6 +4,7 @@ import {Store} from "@ngrx/store";
 import { Book } from '../models/book.model'
 import {BookInBasket} from "../models/basket.model";
 import {AddToBasket} from "../store/actions/book.actions";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-book-list',
@@ -13,8 +14,11 @@ import {AddToBasket} from "../store/actions/book.actions";
 export class BookListComponent implements OnInit {
 
   books: Book[]= [];
+  private router: Router;
 
-  constructor(private store: Store<appState>) {
+  constructor(private store: Store<appState>, router: Router) {
+    this.router = router;
+
   }
 
 
@@ -28,6 +32,11 @@ export class BookListComponent implements OnInit {
     } as BookInBasket;
 
     this.store.dispatch(new AddToBasket(newBookInBasket))
-    console.log(newBookInBasket)
+    console.log({newBookInBasket})
+  }
+  showInfo(book: Book): void {
+    console.log({ book });
+    this.router.navigate(["product-details"]);
+    localStorage.setItem("currentBook", JSON.stringify(book))
   }
 }

@@ -19,8 +19,10 @@ export class BasketComponent implements OnInit {
   constructor(private store: Store<appState>) {}
 
   ngOnInit(): void {
-    this.booksInBasket$ = this.store.select(store => store.book)
-    console.log(this.booksInBasket$)
+    this.store.select("book").subscribe(data => {
+      console.log({data})
+
+    })
   }
 
   removeBookFromBasket(id: number) : void {

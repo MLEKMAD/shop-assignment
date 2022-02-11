@@ -11,6 +11,8 @@ import { BookListComponent } from './book-list/book-list.component';
 import { BasketComponent } from './basket/basket.component';
 import { NavbarComponent } from './navbar/navbar.component'
 import { UsersComponent } from './users/users.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
+import { Book } from './models/book.model';
 
 
 @NgModule({
@@ -21,6 +23,7 @@ import { UsersComponent } from './users/users.component';
     NavbarComponent,
     ContactComponent,
     UsersComponent,
+    ProductDetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,7 @@ import { UsersComponent } from './users/users.component';
     FormsModule,
     StoreModule.forRoot({book: bookReducer} as ActionReducerMap<any,any> ),
   ],
-  providers: [],
+  providers: [Book],
   bootstrap: [AppComponent]
 })
 
